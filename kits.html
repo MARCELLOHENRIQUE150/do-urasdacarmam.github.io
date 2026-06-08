@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>kits e promoções</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"> 
+
+<script>
+
+
+
+</script>
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+} 
+
+
+body{
+    background:linear-gradient(
+        135deg,
+        #fff0f5,
+        #ffd6e8,
+        #ffc0cb
+    );
+    padding:40px;
+}
+
+h1{
+    text-align:center;
+    color:#d63384;
+    margin-bottom:30px;
+}
+
+.galeria{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.galeria img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.galeria img:hover{
+    transform:scale(1.05);
+}
+
+.voltar{
+    display:block;
+    width:220px;
+    margin:40px auto 0;
+    text-align:center;
+    text-decoration:none;
+    background:#ff6fa5;
+    color:white;
+    padding:15px;
+    border-radius:15px;
+    font-weight:600;
+}
+
+</style>
+</head>
+<body>
+
+<h1>🍰 Nosso kits</h1>
+
+<div class="galeria">
+
+    <img src="kit1.jpeg" alt="kit 1">
+
+    <img src="kit2.jpeg" alt="kit 2">
+
+    <img src="kit3.jpeg" alt="kit 3">
+
+    <img src="kit4.jpeg" alt="kit 4">
+
+  
+</div>
+
+<a href="index.html" class="voltar">
+    ← Voltar ao Menu
+</a>
+
+<script>
+
+const imagens = document.querySelectorAll('.galeria img');
+
+imagens.forEach(img => {
+
+    img.addEventListener('click', () => {
+
+        const janela = window.open("");
+
+        janela.document.write(`
+            <img src="${img.src}"
+                 style="
+                 width:100%;
+                 height:100vh;
+                 object-fit:contain;
+                 background:black;">
+        `);
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
+</body>
+</html>
